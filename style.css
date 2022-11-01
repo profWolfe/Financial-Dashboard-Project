@@ -1,0 +1,43 @@
+/*Dashboard*/
+.col-sm-12 {
+    column-count:12;
+    column-span:4;
+}
+.col-md-2 {
+    column-count:3;
+    column-gap: 40px;
+}
+#chart-line {
+    text-align: left;
+}
+#chart-area {
+    text-align: center;
+}
+
+/*Main Page*/
+.clear{
+    clear:both;
+    } 
+    .main{
+    width:100%;
+    }
+    .top {
+    background: blue;
+    width:auto;
+    height: 10%;
+    }
+    .left {
+    float:left;
+    width: 13%;
+    height:100%;
+    background: red;
+    }
+    .right{
+    float:right;
+    width:87%;
+    background: yellow;
+    }
+#dashboard{
+    height:100%;
+    width:100%;
+}
