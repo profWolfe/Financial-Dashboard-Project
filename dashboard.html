@@ -2,20 +2,29 @@
   <head>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
 <body>
   <div class="row">
-    <div class="col-sm-12 col-md-2">
-      <div id="chart-bar"></div>
-      <div id="chart-line"></div>
-      <div id="chart-area"></div>
+    <div class="col-xs-7 col-sm-6">
+        <div id="chart-bar"></div></div>
+      <div class="col-xs-7 col-sm-6">
+        <div id="chart-line"></div></div>
+      <div class="col-xs-7 col-sm-6">
+        <div id="chart-area"></div></div>
+      <div class="col-xs-7 col-sm-6">
+        <div id="chart-bar-line"></div></div>
     </div>
   </div>
-
         <script th:inline="javascript">
         var year = [[{year}]];
         year = [2022];
 
+        /*
+        Chart 1 Bar
+        */
         var options = {
           series: [{
           name: 'Net Profit',
@@ -69,10 +78,16 @@
         var chart = new ApexCharts(document.querySelector("#chart-bar"), options);
         chart.render();
 
+        /*
+        Chart 2 Line
+        */
         var options = {
           series: [{
-            name: "Desktops",
+            name: "Budget",
             data: [10, 41, 35, 51]
+        },{
+            name: "Actual",
+            data: [1, 35, 45, 5]
         }],
           chart: {
           height: 350,
@@ -105,6 +120,9 @@
         var chart = new ApexCharts(document.querySelector("#chart-line"), options);
         chart.render();
 
+        /*
+        Chart 3 Area
+        */
         var options = {
           series: [{
           name: 'series1',
@@ -135,6 +153,128 @@
         };
 
         var chart = new ApexCharts(document.querySelector("#chart-area"), options);
+        chart.render();
+
+        /*
+        Chart 4 Bar and Line
+        */
+        var options = {
+          series: [{
+          name: 'Income',
+          type: 'column',
+          data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6]
+        }, {
+          name: 'Cashflow',
+          type: 'column',
+          data: [1.1, 3, 3.1, 4, 4.1, 4.9, 6.5, 8.5]
+        }, {
+          name: 'Revenue',
+          type: 'line',
+          data: [20, 29, 37, 36, 44, 45, 50, 58]
+        }],
+          chart: {
+          height: 350,
+          type: 'line',
+          stacked: false
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          width: [1, 1, 4]
+        },
+        title: {
+          text: 'XYZ - Stock Analysis (2009 - 2016)',
+          align: 'left',
+          offsetX: 110
+        },
+        xaxis: {
+          categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+        },
+        yaxis: [
+          {
+            axisTicks: {
+              show: true,
+            },
+            axisBorder: {
+              show: true,
+              color: '#008FFB'
+            },
+            labels: {
+              style: {
+                colors: '#008FFB',
+              }
+            },
+            title: {
+              text: "Income (thousand crores)",
+              style: {
+                color: '#008FFB',
+              }
+            },
+            tooltip: {
+              enabled: true
+            }
+          },
+          {
+            seriesName: 'Income',
+            opposite: true,
+            axisTicks: {
+              show: true,
+            },
+            axisBorder: {
+              show: true,
+              color: '#00E396'
+            },
+            labels: {
+              style: {
+                colors: '#00E396',
+              }
+            },
+            title: {
+              text: "Operating Cashflow (thousand crores)",
+              style: {
+                color: '#00E396',
+              }
+            },
+          },
+          {
+            seriesName: 'Revenue',
+            opposite: true,
+            axisTicks: {
+              show: true,
+            },
+            axisBorder: {
+              show: true,
+              color: '#FEB019'
+            },
+            labels: {
+              style: {
+                colors: '#FEB019',
+              },
+            },
+            title: {
+              text: "Revenue (thousand crores)",
+              style: {
+                color: '#FEB019',
+              }
+            }
+          },
+        ],
+        tooltip: {
+          fixed: {
+            enabled: true,
+            position: 'topLeft', // topRight, topLeft, bottomRight, bottomLeft
+            offsetY: 30,
+            offsetX: 60
+          },
+        },
+        legend: {
+          horizontalAlign: 'left',
+          offsetX: 40
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart-bar-line"), options);
         chart.render();
             </script>
 </body>
