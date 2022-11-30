@@ -1,15 +1,7 @@
 /*Dashboard*/
-.col-sm-12 {
-    column-count:12;
-    column-span:4;
-}
-.col-md-2 {
-    column-count:3;
-    column-gap: 40px;
-    column-span:3;
-}
-.col-md-4 {
-    column-count:1;
+.dashboard {
+  width:90%;
+  height:90%;
 }
 #chart-line {
     text-align: left;
@@ -26,26 +18,26 @@
     width:100%;
     }
     .top {
+    padding-left:.525em;
     width:auto;
     height: 10%;
     }
     .left {
+    padding-left:.525em;
     float:left;
-    width: 13%;
     height:100%;
     }
     .right{
     float:right;
-    width:87%;
+    width:90%
     }
 #dashboard{
     height:100%;
-    width:100%;
+    width:90%;
 }
 
 /* Buttons */
 .button-80 {
-  width:200px;
   background: #fff;
   backface-visibility: hidden;
   border-radius: .075rem;
@@ -103,4 +95,8 @@
 
 .button-80:not(:disabled):active {
   transform: translateY(.125rem);
+}
+
+h1 {
+  text-align:center;
 }
