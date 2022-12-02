@@ -24,20 +24,22 @@
     }
     .left {
     padding-left:.525em;
+    width:10%;
     float:left;
     height:100%;
     }
     .right{
     float:right;
-    width:90%
+    width:88%;
     }
 #dashboard{
     height:100%;
-    width:90%;
+    width:100%;
 }
 
 /* Buttons */
 .button-80 {
+  width:170px;
   background: #fff;
   backface-visibility: hidden;
   border-radius: .075rem;

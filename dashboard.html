@@ -8,13 +8,13 @@
   </head>
 <body class="dashboard">
   <div class="row">
-    <div class="col-xs-7 col-sm-6">
+    <div class="col-xs-7 col-sm-6 col-md-4">
         <div id="chart-bar"></div></div>
-      <div class="col-xs-7 col-sm-6">
+      <div class="col-xs-7 col-sm-6 col-md-4">
         <div id="chart-line"></div></div>
-      <div class="col-xs-7 col-sm-6">
+      <div class="col-xs-7 col-sm-6 col-md-4">
         <div id="chart-area"></div></div>
-      <div class="col-xs-7 col-sm-6">
+      <div class="col-xs-7 col-sm-6 col-md-4">
         <div id="chart-bar-line"></div></div>
     </div>
   </div>
@@ -22,19 +22,40 @@
         var year = [[{year}]];
         year = [2022];
 
+        const revenueArray = [
+          "12",
+          "22",
+          "32",
+          "42"
+        ] 
+
+        const netprofitArray = [
+          "33",
+          "66",
+          "45",
+          "52"
+        ] 
+
+        const freecashflowArray = [
+          "20",
+          "40",
+          "60",
+          "25"
+        ] 
+
         /*
         Chart 1 Bar
         */
         var options = {
           series: [{
           name: 'Net Profit',
-          data: [44, 55, 57, 56]
+          data: netprofitArray
         }, {
           name: 'Revenue',
-          data: [76, 85, 101, 98]
+          data: revenueArray
         }, {
           name: 'Free Cash Flow',
-          data: [35, 41, 36, 26]
+          data: freecashflowArray
         }],
           chart: {
           type: 'bar',
