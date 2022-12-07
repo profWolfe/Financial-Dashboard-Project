@@ -1,45 +1,55 @@
 /*Dashboard*/
 .dashboard {
-  width:90%;
-  height:90%;
+  width: 90%;
+  height: 90%;
 }
+
 #chart-line {
-    text-align: left;
+  text-align: left;
 }
+
 #chart-area {
-    text-align: center;
+  text-align: center;
 }
 
 /*Main Page*/
-.clear{
-    clear:both;
-    } 
-    .main{
-    width:100%;
-    }
-    .top {
-    padding-left:.525em;
-    width:auto;
-    height: 10%;
-    }
-    .left {
-    padding-left:.525em;
-    width:10%;
-    float:left;
-    height:100%;
-    }
-    .right{
-    float:right;
-    width:88%;
-    }
-#dashboard{
-    height:100%;
-    width:100%;
+iframe {
+  border:none;
+}
+.clear {
+  clear: both;
+}
+
+.main {
+  width: 100%;
+}
+
+.top {
+  padding-left: .525em;
+  width: auto;
+  height: 10%;
+}
+
+.left {
+  padding-left: .525em;
+  width: 10%;
+  float: left;
+  height: 100%;
+}
+
+.right {
+  float: right;
+  width: 88%;
+}
+
+#dashboard {
+  height: 100%;
+  width: 100%;
 }
 
 /* Buttons */
 .button-80 {
-  width:170px;
+  width: 170px;
   background: #fff;
   backface-visibility: hidden;
   border-radius: .075rem;
@@ -49,7 +59,7 @@
   color: #212121;
   cursor: pointer;
   display: inline-block;
-  font-family: Circular,Helvetica,sans-serif;
+  font-family: Circular, Helvetica, sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: -.01em;
@@ -100,5 +110,24 @@
 }
 
 h1 {
-  text-align:center;
+  text-align: center;
+}
+
+/*
+drop down
+*/
+span {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+
+.dropStyle {
+  width: 100px;
+  /*text-indent: 35px;*/
+  padding-left: 6%;
+  background-color: white;
+  /*border:none*/
+  border: 1px solid #e0e0e0;
+  height: 20px;
 }

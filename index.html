@@ -1,27 +1,46 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="main">
-        <div class="top">
-            <h1>Financial Dashboard</h1>
-        </div>
-
-        <div class="left">
-            <div><a href="#home"><button class="button-80" role="button">Home</button></a></div>
-            <div><a href="#dashboard"><button class="button-80" role="button">Dashboard</button></a></div>
-            <div><button class="button-80" role="button">Documentation</button></div>
-            <div><button class="button-80" role="button">Contact Me</button></div>
-        </div>
-        <div class="right">
-            <iframe id="dashboard" src="dashboard.html" title="description"></iframe>
-        </div>
-        <div class="clear">
-        </div>
+  <div class="main">
+    <div class="top">
+      <h1>Financial Dashboard</h1>
     </div>
+
+    <div class="left">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <select id="drop" class="dropStyle">
+        <option value="1">Home</option>
+        <option value="2">Dashboard</option>
+        <option value="3">Contact Me</option>
+      </select>
+    </div>
+
+    <script>
+      $("#drop").on('change', function () {
+        var value = $(this).val();
+        if (value) {
+          $(".page").hide();
+          $("#Page" + value).show();
+        }
+      });
+    </script>
+    <div class="right">
+      <div id="Page1" class="page" style="">
+        <iframe id="home" src="home.html" title="description"></iframe>
+      </div>
+      <div id="Page2" class="page" style="display:none">
+        <iframe id="dashboard" src="dashboard.html" title="description"></iframe>
+      </div>
+      <div id="Page3" class="page" style="display:none">
+        <iframe id="contact" src="contact.html" title="description"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
 </body>
 
 </html>
