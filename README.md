@@ -12,7 +12,7 @@
 5. Connect to EC2 server and transfer files via WinSCP
 
 ### Sources:
-# Turtoial on how to create a dashboard using ApexCharts, by FullStackMastery on youtube.
+###  Turtoial on how to create a dashboard using ApexCharts, by FullStackMastery on youtube.
 1. https://www.youtube.com/watch?v=zOx7uqolauo
 
 ### To accurately test the website I ran a local testing server to make sure everything ran smoothly before launching it on an EC2 instance.
